@@ -475,6 +475,25 @@ section.block + section.block { border-top: 1px solid var(--line); }
   padding-top: 14px;
 }
 
+/* Email list sign-up */
+.signup {
+  margin-top: 48px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 26px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px 40px;
+}
+.signup .text { display: grid; gap: 6px; flex: 1 1 340px; min-width: 0; }
+.signup .eyebrow { color: var(--accent-text); }
+.signup h3 { font-size: var(--step-2); font-weight: 800; letter-spacing: -0.02em; }
+.signup p { color: var(--muted); max-width: var(--measure); }
+.signup .btn { white-space: nowrap; }
+.signup .btn:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
 /* Footer */
 .site-foot {
   background: var(--hero-bg);
@@ -791,6 +810,15 @@ section.block + section.block { border-top: 1px solid var(--line); }
           <p class="note">Questions, or can't make October 14? Email your team's coach before the tryout date: <a href="mailto:ravenscurling@cunet.carleton.ca">Ed Cyr</a> (men) or <a href="mailto:curlupwithjamie@gmail.com">Jamie Sinclair</a> (women). <a href="#contact">All coach contacts</a></p>
         </div>
       </div>
+
+      <div class="signup" id="email-list">
+        <div class="text">
+          <p class="eyebrow">Email list</p>
+          <h3>Get Ravens Curling updates</h3>
+          <p>Join the email list for tryout dates, practice schedules and other important news about the team. Sign-up takes a minute through a Microsoft Form.</p>
+        </div>
+        <a class="btn" href="https://forms.cloud.microsoft/r/B8VHtvBhwE" target="_blank" rel="noopener">Join the email list</a>
+      </div>
     </div>
   </section>
 
@@ -816,6 +844,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
       </div>
     </div>
     <ul>
+      <li><a href="https://forms.cloud.microsoft/r/B8VHtvBhwE" target="_blank" rel="noopener">Join the email list</a></li>
       <li><a href="https://goravens.ca/clubteams/curling" target="_blank" rel="noopener">Go Ravens: Curling</a></li>
       <li><a href="https://futurefunder.carleton.ca/giving-fund/mens-curling-competitive-club/" target="_blank" rel="noopener">Support the program on FutureFunder</a></li>
       <li><a href="https://carleton.ca" target="_blank" rel="noopener">carleton.ca</a></li>
