@@ -4,8 +4,8 @@ Website for the Carleton Ravens varsity curling program: program history, season
 
 | File | Purpose |
 | --- | --- |
-| `ravenscurling.html` | The site. One self-contained file; styles, script and logos are embedded. |
-| `index.html` | Sends visitors from the site root to `ravenscurling.html`. |
+| `index.html` | The site. One self-contained file; styles, script and logos are embedded. |
+| `ravenscurling.html` | Forwards the old `ravenscurling.html` address (and any `#section`) to the site root. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are, without a Jekyll build. |
 
 ## Publishing with GitHub Pages
@@ -15,13 +15,13 @@ In the repository on GitHub: **Settings → Pages → Build and deployment**
 - Source: **Deploy from a branch**
 - Branch: **main**, folder **/ (root)**
 
-The site is then served at `https://edcyr.github.io/<repository-name>/`.
+The site is served at https://ravenscurling.com (custom domain, set in the same Pages settings and recorded in the `CNAME` file).
 
 ## Updating
 
-Edit `ravenscurling.html`, commit, and push to `main`. Pages redeploys on its own, usually within a few minutes.
+Edit `index.html`, commit, and push to `main`. Pages redeploys on its own, usually within a few minutes.
 
-Before each tryout, update the date in three places in `ravenscurling.html`:
+Before each tryout, update the date in three places in `index.html`:
 
 1. The red "Next tryout" bar at the top of the page
 2. The ticket in the Tryouts section
