@@ -5,7 +5,6 @@ Website for the Carleton Ravens varsity curling program: program history, season
 | File | Purpose |
 | --- | --- |
 | `index.html` | The site. One self-contained file; styles, script and logos are embedded. |
-| `ravenscurling.html` | Forwards the old `ravenscurling.html` address (and any `#section`) to the site root. |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are, without a Jekyll build. |
 
 ## Publishing with GitHub Pages
