@@ -22,8 +22,8 @@ document.addEventListener('click', function (e) {
 (function () {
   var el = document.getElementById('countdown');
   if (!el) return;
-  // Tryout: Wednesday, October 14, 2026 at 9:00 pm Ottawa time (EDT, UTC−4)
-  var tryout = new Date('2026-10-14T21:00:00-04:00');
+  // Tryout: Wednesday, October 28, 2026 at 9:00 pm Ottawa time (EDT, UTC−4)
+  var tryout = new Date('2026-10-28T21:00:00-04:00');
   var now = new Date();
   var ms = tryout - now;
   if (ms <= 0) {

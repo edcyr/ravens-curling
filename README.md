@@ -32,7 +32,7 @@ Before each tryout, update the date in these places:
 
 1. The red "Next tryout" bar at the top of `index.html`, `roster.html` and `events.html`
 2. The ticket in the Tryouts section
-3. The countdown date in `site.js` (`new Date('2026-10-14T21:00:00-04:00')`)
+3. The countdown date in `site.js` (`new Date('2026-10-28T21:00:00-04:00')`)
 
 Each season, replace the team photos in `images/` and the names in `roster.html`, and update the championship dates, hosts and links in `events.html`.
 
