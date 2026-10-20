@@ -735,6 +735,49 @@ section.gallery:nth-of-type(odd) { background: var(--surface); }
   white-space: nowrap;
 }
 
+/* Coaches page */
+.coach-profile.alt { background: var(--surface); }
+.profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 40px 56px;
+  align-items: start;
+}
+.profile-main { display: grid; gap: 1em; }
+.profile-main .eyebrow { color: var(--accent-text); }
+.profile-main h2 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.025em; }
+.profile-main p { max-width: var(--measure); }
+.profile-lede { font-family: var(--font-serif); font-size: var(--step-1); line-height: 1.45; }
+.highlights { list-style: none; margin: 0; padding: 10px 22px 18px; display: grid; }
+.highlights li {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 12px;
+  padding-block: 11px;
+  border-bottom: 1px solid #2B2B2E;
+  font-size: 0.9375rem;
+}
+.hl-yr { font-weight: 700; color: var(--carleton-red); font-variant-numeric: tabular-nums; }
+.company { margin-top: 64px; border-top: 3px solid var(--fg); padding-top: 24px; display: grid; gap: 28px; }
+.company-head { display: grid; gap: 8px; max-width: var(--measure); }
+.company-head .eyebrow { color: var(--accent-text); }
+.company-head h3 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.025em; }
+.company-head p:last-child { color: var(--muted); }
+.services {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 32px;
+}
+.services li { border-top: 1px solid var(--line); padding-block: 16px 22px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.services h4 { margin: 0; font-size: var(--step-0); font-weight: 700; }
+.services p { color: var(--muted); font-size: 0.9375rem; }
+.company-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn.ghost-dark { background: transparent; border-color: var(--fg); color: var(--fg); }
+.btn.ghost-dark:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
 /* Footer */
 .site-foot {
   background: var(--hero-bg);
@@ -775,7 +818,7 @@ section.gallery:nth-of-type(odd) { background: var(--surface); }
 .site-foot .lg-oua { height: 43px; }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   .wordmark .divider, .wordmark .team { display: none; }
 }
 @media (max-width: 900px) {
@@ -786,15 +829,18 @@ section.gallery:nth-of-type(odd) { background: var(--surface); }
     margin-right: 0;
     order: -1;
   }
-  .history-intro, .tryout-grid, .goals, .site-foot .wrap, .event-grid, .road { grid-template-columns: minmax(0, 1fr); }
+  .history-intro, .tryout-grid, .goals, .site-foot .wrap, .event-grid, .road, .profile-grid { grid-template-columns: minmax(0, 1fr); }
+  .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .road { gap: 20px; }
 }
-@media (max-width: 920px) {
+@media (max-width: 980px) {
   /* Header: raven and league marks on the first row, section links below */
   .site-head .leagues { order: 2; padding-left: 0; border-left: 0; gap: 10px; }
   .site-nav { order: 3; flex-basis: 100%; }
 }
 @media (max-width: 620px) {
+  .services { grid-template-columns: minmax(0, 1fr); }
+  .highlights li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .honours { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
   .timeline li { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .tryout-bar a.cta { margin-left: 0; }

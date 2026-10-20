@@ -6,6 +6,7 @@ Website for the Carleton Ravens varsity curling program: program history, season
 | --- | --- |
 | `index.html` | Home page: history, goals, tryouts and the email list. |
 | `roster.html` | Roster page: team photos and lineups for the men's and women's teams. |
+| `coaches.html` | Coaches page: coach bios, starting with Jamie Sinclair and Curl Up With Jamie. |
 | `events.html` | Events page: how the OUA and U SPORTS championships work, with this season's dates and links. |
 | `gallery.html` | Gallery page: OUA and U SPORTS slideshows, with links to download the original photos. |
 | `styles.css` | Shared styles for both pages. |
@@ -30,7 +31,7 @@ Edit the pages, commit, and push to `main`. Pages redeploys on its own, usually 
 
 Before each tryout, update the date in these places:
 
-1. The red "Next tryout" bar at the top of `index.html`, `roster.html` and `events.html`
+1. The red "Next tryout" bar at the top of every page (`index.html`, `roster.html`, `coaches.html`, `events.html`, `gallery.html`)
 2. The ticket in the Tryouts section
 3. The countdown date in `site.js` (`new Date('2026-10-28T21:00:00-04:00')`)
 
