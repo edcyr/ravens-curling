@@ -12,6 +12,7 @@ Website for the Carleton Ravens varsity curling program: program history, season
 | `styles.css` | Shared styles for both pages. |
 | `site.js` | Shared script: in-page links and the tryout countdown. |
 | `gallery.js` | Gallery slideshows; reads `images/gallery/gallery.json`. |
+| `scripts/stamp-assets.py` | Adds a fingerprint (`?v=…`) to the stylesheet and script links so browsers load the latest version after each update. |
 | `scripts/build-gallery.py` | Shrinks gallery photos to web size and rebuilds `gallery.json`. |
 | `images/` | Logos (raven, U SPORTS, OUA), team photos, and opponent logos in `images/teams/` (from each team's official website). |
 | `.nojekyll` | Tells GitHub Pages to serve the files as they are, without a Jekyll build. |
@@ -27,7 +28,7 @@ The site is served at https://ravenscurling.com (custom domain, set in the same 
 
 ## Updating
 
-Edit the pages, commit, and push to `main`. Pages redeploys on its own, usually within a few minutes.
+Edit the pages, run `python3 scripts/stamp-assets.py` if you changed `styles.css`, `site.js` or `gallery.js`, then commit and push to `main`. Pages redeploys on its own, usually within a few minutes.
 
 Before each tryout, update the date in these places:
 
