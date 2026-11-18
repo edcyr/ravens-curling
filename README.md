@@ -8,7 +8,9 @@ Website for the Carleton Ravens varsity curling program: program history, season
 | `roster.html` | Roster page for the current season (2026–27), with a Season menu linking to past seasons. |
 | `roster-2025-26.html` | Archived 2025–26 roster with that season's team photos. |
 | `coaches.html` | Coaches page: coach bios, starting with Jamie Sinclair and Curl Up With Jamie. |
-| `events.html` | Events page: how the OUA and U SPORTS championships work, with this season's dates and links. |
+| `schedule.html` | Schedule page: season calendar for both teams, and Team Blad / Team Nicholls results and next events. |
+| `championships.html` | Championships page: how the OUA and U SPORTS championships work, with this season's dates and links. |
+| `events.html` | Redirect for old links: sends visitors to `championships.html` (or `schedule.html#team-nicholls`). |
 | `gallery.html` | Gallery page: OUA and U SPORTS slideshows, with links to download the original photos. |
 | `styles.css` | Shared styles for both pages. |
 | `site.js` | Shared script: in-page links and the tryout countdown. |
@@ -33,14 +35,18 @@ Edit the pages, run `python3 scripts/stamp-assets.py` if you changed `styles.css
 
 Before each tryout, update the date in these places:
 
-1. The red "Next tryout" bar at the top of every page (`index.html`, `roster.html`, `coaches.html`, `events.html`, `gallery.html`)
+1. The red "Next tryout" bar at the top of every page (`index.html`, `roster.html`, `roster-2025-26.html`, `coaches.html`, `schedule.html`, `championships.html`, `gallery.html`)
 2. The ticket in the Tryouts section
 3. The countdown date in `site.js` (`new Date('2026-10-28T21:00:00-04:00')`)
 
-Each season, copy `roster.html` to `roster-YYYY-YY.html` as an archive (add it to the Season menu on every roster page), then update `roster.html` with the new lineups and new team photos in `images/`, and update the championship dates, hosts and links in `events.html`.
+Each season, copy `roster.html` to `roster-YYYY-YY.html` as an archive (add it to the Season menu on every roster page), then update `roster.html` with the new lineups and new team photos in `images/`, and update the championship dates, hosts and links in `championships.html`.
 
 ## Adding gallery photos
 
 1. Put the photos in `images/gallery/oua/` or `images/gallery/usports/`. They play in filename order.
 2. Run `python3 scripts/build-gallery.py` (macOS). Photos larger than 1600 px are shrunk in place to about 200 KB each, and the slideshow list is rebuilt.
 3. Commit and push. Full-resolution originals stay in the shared folders that the "Download original photos" buttons link to.
+
+## After each event
+
+On `schedule.html`: update the team's next-event card, add a results block (newest first, open by default; older ones closed), and update the season calendar entry. Update the Next up strip on `index.html` to match.
