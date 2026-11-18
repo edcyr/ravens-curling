@@ -519,6 +519,7 @@ section.block + section.block { border-top: 1px solid var(--line); }
 .jump a:hover { border-color: var(--white); background: var(--white); color: var(--black); }
 .team-photo { margin: 0 0 32px; }
 .team-photo img { display: block; width: 100%; height: auto; }
+.team-photo figcaption { font-size: 0.875rem; color: var(--muted); margin-top: 10px; }
 .lineup {
   list-style: none;
   margin: 0;
@@ -777,6 +778,52 @@ section.gallery:nth-of-type(odd) { background: var(--surface); }
 .company-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .btn.ghost-dark { background: transparent; border-color: var(--fg); color: var(--fg); }
 .btn.ghost-dark:hover { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+/* Roster season menu and photo placeholder */
+.season-menu { position: relative; display: inline-block; justify-self: start; margin-top: 4px; }
+.season-menu summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  padding: 8px 14px;
+  border: 2px solid #555;
+  color: var(--hero-fg);
+}
+.season-menu summary::-webkit-details-marker { display: none; }
+.season-menu summary::after { content: "\25BE"; margin-left: 8px; }
+.season-menu[open] summary, .season-menu summary:hover { border-color: var(--white); }
+.season-menu ul {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 100%;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: var(--black);
+  border: 1px solid #444;
+}
+.season-menu a { display: block; padding: 8px 14px; color: var(--hero-fg); text-decoration: none; white-space: nowrap; }
+.season-menu a:hover { background: #222; }
+.season-menu a[aria-current="page"] { color: var(--carleton-red); font-weight: 700; }
+.photo-pending {
+  margin: 0 0 32px;
+  aspect-ratio: 3 / 2;
+  max-width: 100%;
+  max-height: 360px;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
 
 /* Footer */
 .site-foot {
